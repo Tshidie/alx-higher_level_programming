@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-def simple_delete(a_dictionary, key=""):
-    if key in a_dictionary:
-        del a_dictionary[key]
-    return a_dictionary
+def update_dictionary(my_dict, key, value):
+
+    if key in my_dict:
+        del my_dict[key]
+        my_dict.update({key: value})
+    else:
+        my_dict.update({key: value})
+
+    return my_dict
